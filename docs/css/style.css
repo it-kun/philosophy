@@ -1,0 +1,241 @@
+/* main-font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* text-font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* dot font */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/* ujin */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+body {
+/* font-family */
+	font-family: 'Montserrat', sans-serif;
+	background-color:black;
+/* 	display: flex;
+	align-items : center;
+	justify-content: center;
+	height: 100vh; */
+	height : 7300px;
+	overflow-x: hidden;
+	color : white;
+}
+img {
+/* 화질개선	*/
+	image-rendering: -webkit-optimize-contrast;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+/* library */
+.bd {
+	border: 2px solid black;
+}
+.bd2 {
+	border: 2px solid red;
+}
+.bd3 {
+	border: 2px solid green;
+}
+.bd4 {
+	border: 2px solid blue;
+}
+.bd5 {
+	border: 2px solid purple;
+}
+
+.con {
+	max-width : var(--con-width);
+	margin: 0 auto;
+}
+
+/* custom */
+:root {
+	--con-width : 1200px ;
+	--body-bgc : #fff ;
+}
+
+.top_progress_bar {
+	position: fixed;
+	width : 100%;
+	height : 7px;
+	background-color: rgba(255,255,255,.9);
+	animation : top_progress both;
+	animation-timeline: scroll(root block);
+	animation-range: cover 0% cover 100%;
+	border-radius : 0 0 15px 0;
+}
+
+@keyframes top_progress {
+	0% {
+		width : 0%
+	}
+	100% {
+		width : 100%;
+	}
+}
+
+
+
+
+
+.side_diagram_box {
+	position: fixed;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100vh;
+}
+
+.diagram {
+	position: fixed;
+	box-shadow : 0px 0px 10px rgba(255,255,255,1),
+		inset 0px 0px 10px rgba(255,255,255,1);
+	background-color: #fff;
+}
+
+.diagram_anime {
+	animation : diagram_spin 5s infinite both;
+	animation: diagram_spin both;
+	animation-timeline: scroll(root block);
+	animation-range: cover 0% cover 100%;
+}
+
+@keyframes diagram_spin {
+	0% {
+		transform : rotate(0deg);
+		transition : transform .1s;
+	}
+	100% {
+		transform : rotate(720deg);
+		transition : transform .1s;
+	}
+}
+
+
+:root {
+	--diagram_size : 90px;
+}
+
+.circle1 {
+	width : var(--diagram_size);
+	height : var(--diagram_size);
+	border-radius : 48%;
+	right : 50px;
+	top : 50px;
+}
+
+.circle2 {
+	width : var(--diagram_size);
+	height : var(--diagram_size);
+	border-radius : 48%;
+	left : 50px;
+	bottom : 50px;
+}
+
+.square {
+	width : var(--diagram_size);
+	height : var(--diagram_size);
+	border-radius : 15px;
+	right : 50px;
+	bottom : 50px;
+}
+
+.triangle {
+	position: fixed;
+	top : 30px;
+	left : 30px;
+	width : 100px;
+	height : 100px;
+	 transform-origin: 50% 62.5%;
+	text-shadow : 0px 0px 15px white;
+}
+
+/* text */
+
+.logo_box {
+	position: absolute;
+	left : 50%;
+	transform : translatex(-50%);
+	top : 200px;
+	text-align : center;
+	white-space : nowrap;
+}
+
+.big_text {
+	width: 100vw;
+	position: relative;
+	left : 50%;
+	transform : translatex(-50%);
+	text-transform : uppercase;
+	font-size : 10rem;
+	line-height : 130px;
+}
+
+.big_text2 {
+	top : 350px;
+}
+
+.small_text {
+	font-family: 'Playfair Display', serif;
+	position: relative;
+	font-size : 4rem;
+	width : 1400px;
+	left : 50%;
+	transform : translatex(-50%);
+	white-space : wrap ;
+}
+ b {
+	white-space : nowrap;
+}
+
+.small_text1 {
+	top : 450px;
+	opacity : 0;
+  animation: small_text_effect both;
+	animation-timeline: view();
+	animation-range: cover 10% cover 30%;
+}
+
+@keyframes small_text_effect {
+	0% {
+		opacity : 0;
+	}
+	100% {
+		opacity : 1;
+	}
+}
+
+
+.big_text3 {
+	top : 300px;
+	line-height : 90px;
+}
+.big_text3 > .small_text {
+	margin-top: 70px;
+}
+
+.big_text3 > b {
+	font-family: 'DotGothic16', sans-serif;
+}
+
+.small_text2 {
+	top : 1000px;
+	animation: small_text_effect both;
+	animation-timeline: view();
+	animation-range: cover 10% cover 30%;
+}
+.small_text2 > span {
+	font-weight : bold;
+	font-family: 'DotGothic16', sans-serif;
+}
+
+.big_text4 {
+	top : 6700px;
+	left : 50%;
+	transform : translatex(-50%);
+	text-align : center;
+	white-space:nowrap;
+}
